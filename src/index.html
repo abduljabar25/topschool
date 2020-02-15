@@ -1,11 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
   <meta charset="utf-8">
   <title>Topschool</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo_style.css">
+    <link rel="stylesheet" href="assets/css/style9.css">
+    <link rel="stylesheet" href="assets/css/demo.css">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>		
+    <script src="assets/js/jquery.js"></script>
+    <script  src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/jquery.flexslider.js"></script>
+    <script>
+        $(document).ready(function() {
+          // FlexSlider 
+            $('.flexslider').flexslider({
+              animation: "fade",
+              directionNav: false
+            });
+    
+          // Show or hide the sticky footer button
+          $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+              $('.go-top').fadeIn(200);
+            } else {
+              $('.go-top').fadeOut(200);
+            }
+          });		
+          // Animate the scroll to top
+          $('.go-top').click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+          })
+        });
+      </script>
 </head>
 <body>
   <app-root></app-root>
